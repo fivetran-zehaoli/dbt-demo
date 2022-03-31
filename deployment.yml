@@ -27,9 +27,3 @@ jobs:
    steps:
      - name: version
        command: dbt --version
-
-  name: fivetran_log
-   schedule: 15 8 * * * # The example will run every 30 minutes. Note that the cron string is quoted as otherwise it will be treated as invalid alias node (see https://yaml.org/spec/1.2/spec.html#*%20alias// for details)
-   steps:
-     - name: run fivetran log
-       command: dbt run --models fivetran_log
